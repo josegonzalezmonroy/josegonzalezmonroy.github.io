@@ -1,107 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>José González</title>
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="#apresentacao">Apresentação</a></li>
-            <li><a href="#estudos">Estudos</a></li>
-            <li><a href="#trabalhos">Trabalhos</a></li>
-            <li><a href="#objetivos">Objetivos</a></li>
-            <li><a href="#curiosidades">Curiosidades</a></li>                
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>José González</h1>
-        <p>Estudante de Programação Full Stack</p>
+    <header class="cabecalho">
+        <div class="avatar-mini">
+            <span class="avatar-conteudo-mini">
+                <img class="avatar-imagem-mini" src="images/jose avatar.jpg" alt="Foto de perfil">
+            </span>
+        </div>
+        <nav>
+            <ul class="botoes-nav">
+                <li><a class="nav-interna" href="#apresentacao">Apresentação</a></li>
+                <li><a class="nav-interna" href="#estudos">Estudos</a></li>
+                <li><a class="nav-interna" href="#trabalhos">Trabalhos</a></li>
+                <li><a class="nav-interna" href="#contato">Contato</a></li>
+                <li><a class="nav-interna" href="#objetivos">Objetivos</a></li>
+                <li><a class="nav-interna" href="#curiosidades">Curiosidades</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2 id="apresentacao">Apresentação</h2>
-            <figure>
-                <img src="images/profile.png" width=100 alt="Foto de perfil">
-            <p>Meu nome é José González, sou venezuelano, formado em Engenharia de Produção Animal, 
-            com experiencia em controle de qualidade, atualmente estou realizando minha transição 
-            de carreira para a area da tecnologia graças ao programa de formação da 
-            <a href="https://totidiversidade.com.br/" target="_blank" rel="noopener"> Toti</a> </p>
-        </section>    
-    
-        <section>
-        <h2 id="estudos">Estudos</h2>
-            <ul>
-                <li>Engenharia de Produção Animal</li>
-                <li>Programação Full Stack <em>(atualmente cursando)</em></li>
-            </ul>
-        </section>
-    
-        <section>       
-        <h2 id="trabalhos">Trabalhos</h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-    
-        <section>
-        <h2 id="objetivos">Objetivos</h2>
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-        </section>
+    <img class="imagem-topo"
+        src="https://media.istockphoto.com/photos/code-programming-for-website-editors-view-picture-id1290492381?b=1&k=20&m=1290492381&s=170667a&w=0&h=NQSXJKhncCP1GLzDkD8KPZsCOh1wldDj5RZbPVJztxQ="
+        alt="">
 
-        <section>
-            <h2 id="curiosidades">Curiosidades</h2>
-            <ul>
-                <li>Sou padeiro artesanal.</li>
-                <li>Jogo xadrez.</li>
-                <li>Tenho 3 gatos.</li>
-                <li>Gosto muito de escutar podcasts.</li>
-            </ul>
-        </section>
-        
-        <section>
-            <nav>
+
+    <section class="apresentacao">
+        <div class="avatar">
+            <span>
+                <img class="avatar-imagem" src="images/jose avatar.jpg" alt="Foto de perfil">
+            </span>
+        </div>
+
+        <div class="meu-nome">
+            <h1>José González</h1>
+            <p class="sub-h1">Estudante de Programação Full Stack</p>
+            <!--<h2 id="apresentacao-h2">Apresentação</h2>-->
+            <p id="apresentacao-p">Meu nome é José González, sou venezuelano, formado em Engenharia de Produção Animal,
+                com experiencia em controle de qualidade, atualmente estou realizando minha transição
+                de carreira para a area da tecnologia graças ao programa de formação da
+                <a href="https://totidiversidade.com.br/" target="_blank" rel="noopener"> Toti</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="estudos">
+        <h2 id="estudos">Estudos</h2>
+        <ul>
+            <li>Engenharia de Produção Animal</li>
+            <li>Programação Full Stack <em>(atualmente cursando)</em></li>
+        </ul>
+    </section>
+
+    <section class="trabalhos">
+        <h2 id="trabalhos">Trabalhos</h2>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+    <section class="objetivos">
+        <h2 id="objetivos">Objetivos</h2>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </section>
+
+    <section class="curiosidades">
+        <h2 id="curiosidades">Curiosidades</h2>
+        <ul>
+            <li>Sou padeiro artesanal.</li>
+            <li>Jogo xadrez.</li>
+            <li>Tenho 3 gatos.</li>
+            <li>Gosto muito de escutar podcasts.</li>
+        </ul>
+    </section>
+
+    <section class="contato">
+        <nav>
             <h2 id="contato">Contato</h2>
-            <ul>    
-                <li><a href="https://www.linkedin.com/in/josegonzalezmonroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://github.com/josegonzalezmonroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/josegonzalezmonroy/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/josegonzalezmonroy/" target="_blank"
+                        rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="mailto:josegonzalezmonroy@gmail.com">Email</a></li>
             </ul>
-            </nav>
-        </section>
-        
-        <section>
-            <fieldset>
-                <legend><h3>Se preferir, deixe uma mensagem</h3></legend>
-                <form>
-                    <label>Nome: <br><input type="text" name="nome" required></label><br>
-                    <label>Sobrenome: <br><input type="text" name="sobrenome" required></label><br>
-                    <label>Email: <br><input type="email" name="email" required></label><br>
-                    
-                    <!--Outra forma de label-->
-                    <label for="note">Sua mensagem:</label><br>
-                    <textarea name="note" id="note" cols="30" rows="10" placeholder="Escreva sua mensagem aquí"></textarea><br>
-                    <input type="reset" value="Limpar formulário">
-                    <input type="submit" value="Enviar">
-                </form>
-            </fieldset>
-        </section>
-    </main>
+        </nav>
+    </section>
+
+    <section class="contato-formulario">
+        <legend>
+            <h3>Se preferir, deixe uma mensagem</h3>
+        </legend>
+        <form>
+            <label>Nome: <br><input type="text" name="nome" required></label><br>
+            <label>Sobrenome: <br><input type="text" name="sobrenome" required></label><br>
+            <label>Email: <br><input type="email" name="email" required></label><br>
+            <label for="note">Sua mensagem:</label><br>
+            <textarea name="note" id="note" cols="30" rows="10" placeholder="Escreva sua mensagem aquí"></textarea><br>
+            <input type="reset" value="Limpar formulário">
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
     <footer>
-    <p>Realizado por José González</p>
+        <p>Realizado por José González</p>
     </footer>
 </body>
+
 </html>
