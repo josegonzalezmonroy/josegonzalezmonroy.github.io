@@ -34,7 +34,6 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
 }
 
 .botoes-nav {
@@ -62,6 +61,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
 
 }
 
@@ -77,7 +78,6 @@ body {
 }
 
 .avatar-conteudo {
-    background-color: #f80808;
     border-radius: 50%;
     height: 264px;
     width: 264px;
@@ -90,7 +90,9 @@ body {
     width: 100%;
 }
 
-.github-icon, .linkedin-icon, .stack-icon{
+.github-icon,
+.linkedin-icon,
+.stack-icon {
     position: absolute;
     bottom: -29px;
     height: 58px;
@@ -100,7 +102,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0 0 0/ .5);
 }
 
-.linkedin-icon{
+.linkedin-icon {
     left: calc(50% - 29px);
 }
 
@@ -113,12 +115,24 @@ body {
 }
 
 h1 {
-    margin-top: 25px;
     margin-left: 30%;
     height: 73px;
     font-size: 55px;
     font-weight: bold;
     color: #707070;
+}
+
+h2 {
+    margin-left: 20%;
+    height: 73px;
+    font-size: 55px;
+    font-weight: lighter;
+    color: #707070;
+
+}
+
+em {
+    font-style: italic;
 }
 
 .sub-h1 {
@@ -151,37 +165,155 @@ h1 {
 }
 
 .estudos {
-    background-color: aqua;
+    background-color: #DEDEDE;
     grid-column: 1 / 5;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+#estudos-list {
+    margin-left: 20%;
+    line-height: 30px;
+    list-style-type: circle;
+}
+
+#estudo-atual,
+#estudo-univ,
+#estudo-tec {
+    font-size: 21px;
+    font-weight: bold;
+    color: #707070;
+    margin-top: 20px;
+}
+
+#estudo-info {
+    font-size: 13px;
+    font-weight: 600;
+    color: #707070;
+    text-transform: uppercase;
 }
 
 .trabalhos {
     background-color: gray;
     grid-column: 1 / 5;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .objetivos {
     background-color: brown;
     grid-column: 1 / 5;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .curiosidades {
     background-color: yellow;
     grid-column: 1 / 5;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+#contato-titleh2 {
+    margin-left: 30%;
+    margin-right: 30%;
+    color: #ffffff;
+}
+
+#contato-titleh3 {
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 
 .contato {
-    background-color: chocolate;
+    background-color: #000000;
     grid-column: 1 / 3;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#instagram, #twitter, #gmail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#gmail-icon,
+#instagram-icon,
+#twitter-icon {
+  max-height: 65px;
+    margin-bottom: 10px;
 }
 
 .contato-formulario {
-    background-color: purple;
+    background-color: #000000;
     grid-column: 3/ 5;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+input {
+    margin-bottom: 15px;
+    height: 34px;
+    width: 400px;
+    border-radius: 10px;
+    border: #000000;
+}
+
+textarea {
+    width: 400px;
+    border-radius: 10px;
+    border: #000000;
+}
+
+.botton {
+    background-color: #585858;
+    height: 34px;
+    width: auto;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 9px 15px 9px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#botoes-form {
+    margin-top: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
-    background-color: darkgreen;
+    background-color: #000000e5;
+    padding-top: 15px;
+    padding-bottom: 15px;
     grid-column: 1 / 5;
     text-align: center;
+    font-weight: 500;
+    color: #ffffff;
 }
