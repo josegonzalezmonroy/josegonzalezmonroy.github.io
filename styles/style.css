@@ -171,15 +171,13 @@ em {
     padding-bottom: 35px;
 }
 
-#estudos-list {
+#estudos-list, .exp {
     margin-left: 20%;
     line-height: 30px;
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
-#estudo-atual,
-#estudo-univ,
-#estudo-tec {
+#estudo-titulo {
     font-size: 21px;
     font-weight: bold;
     color: #707070;
@@ -193,11 +191,33 @@ em {
     text-transform: uppercase;
 }
 
-.trabalhos {
+.experiencia {
     background-color: gray;
     grid-column: 1 / 5;
     padding-top: 35px;
     padding-bottom: 35px;
+}
+
+#experiencia-h2{
+    color: #ffffff;
+}
+
+.exp{
+    color: #ffffff;
+}
+
+.exp-titulo{
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.exp-info {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255 255 255/ .95);
+    text-transform: uppercase;
 }
 
 .objetivos {
