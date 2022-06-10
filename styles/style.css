@@ -128,7 +128,6 @@ h2 {
     font-size: 55px;
     font-weight: lighter;
     color: #707070;
-
 }
 
 em {
@@ -164,27 +163,28 @@ em {
     text-decoration: none;
 }
 
-.estudos {
+.estudos, .experiencia, .projetos {
     background-color: #DEDEDE;
     grid-column: 1 / 5;
     padding-top: 35px;
     padding-bottom: 35px;
 }
 
-#estudos-list, .exp {
+#estudos-list,
+.exp-list {
     margin-left: 20%;
     line-height: 30px;
     list-style-type: disc;
 }
 
-#estudo-titulo {
+#estudo-titulo, .exp-titulo, .projeto-titulo{
     font-size: 21px;
     font-weight: bold;
     color: #707070;
     margin-top: 20px;
 }
 
-#estudo-info {
+#estudo-info, .exp-info{
     font-size: 13px;
     font-weight: 600;
     color: #707070;
@@ -192,46 +192,77 @@ em {
 }
 
 .experiencia {
-    background-color: gray;
-    grid-column: 1 / 5;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    background-color: #434343;
 }
 
-#experiencia-h2{
+#experiencia-h2, .exp-list, .exp-titulo{
     color: #ffffff;
-}
-
-.exp{
-    color: #ffffff;
-}
-
-.exp-titulo{
-    color: #ffffff;
-    font-size: 21px;
-    font-weight: bold;
-    margin-top: 20px;
 }
 
 .exp-info {
+    color: rgba(255 255 255/ .95);
+}
+
+.projetos {
+    background-color: #F2F2F2;
+}
+
+.cards{
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-projeto {
+    height: auto;
+    width: 260px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.cont-img-projeto{
+    height: 130px;
+    width: 232px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-projeto{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.projeto-info{
     font-size: 13px;
     font-weight: 600;
-    color: rgba(255 255 255/ .95);
-    text-transform: uppercase;
+    color: #707070;
 }
 
-.objetivos {
-    background-color: brown;
-    grid-column: 1 / 5;
-    padding-top: 35px;
-    padding-bottom: 35px;
+.projeto-titulo, .projeto-info{
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
-.curiosidades {
-    background-color: yellow;
-    grid-column: 1 / 5;
+.botao-projeto{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.contato {
+    background-color: #000000;
+    grid-column: 1 / 3;
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 #contato-titleh2 {
@@ -243,15 +274,6 @@ em {
 #contato-titleh3 {
     color: #ffffff;
     margin-bottom: 15px;
-}
-
-.contato {
-    background-color: #000000;
-    grid-column: 1 / 3;
-    padding-top: 35px;
-    padding-bottom: 15%;
-    padding-left: 15%;
-    padding-right: 15%;
 }
 
 .redes-sociais {
