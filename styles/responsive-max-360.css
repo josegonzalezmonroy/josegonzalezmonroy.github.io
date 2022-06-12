@@ -1,0 +1,154 @@
+body {
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.estudos,
+.experiencia,
+.projetos,
+.contato,
+.contato-formulario,
+.footer {
+    background-color: #3A3A3A;
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.avatar-mini,
+.cabecalho {
+    display: none;
+}
+
+.imagem-topo {
+    width: 100%;
+    height: 120px;
+}
+
+
+.avatar {
+    position: relative;
+    top: -130px;
+    left: 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 3px 2px #707070;
+}
+
+.avatar-conteudo {
+    border-radius: 50%;
+    height: 204px;
+    width: 204px;
+    overflow: hidden;
+}
+
+.github-icon,
+.linkedin-icon,
+.stack-icon {
+    position: absolute;
+    bottom: -24px;
+    height: 48px;
+    width: 48px;
+
+}
+
+.linkedin-icon {
+    left: calc(50% - 24px);
+}
+
+.github-icon {
+    left: calc(20% - 24px);
+}
+
+.stack-icon {
+    right: calc(20% - 24px);
+}
+
+.meu-nome {
+    position: relative;
+    margin-top: -110px;
+}
+
+.apresentacao {
+    background-color: #ffffff;
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1,
+h2 {
+    margin: 20px;
+    text-align: center;
+    font-size: 48px;
+    height: auto;
+}
+
+.sub-h1{
+    font-size: 34px;
+    font-weight: lighter;
+    font-style: italic;
+    height: auto;
+    margin:0 25px 25px 25px;
+}
+
+#apresentacao-p {
+    margin:0 25px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.estudos,
+.projetos {
+    background-color: #DEDEDE;
+}
+
+.experiencia {
+    background-color: #434343;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    height: 34px;
+    width: 330px;
+    border-radius: 10px;
+    border: #000000;
+}
+
+textarea {
+    width: 330px;
+    border-radius: 10px;
+    border: #000000;
+}
+
+#botoes-form {
+    margin-top: 10px;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+}
+
+.contato,
+.contato-formulario{
+    background-color: #000000;
+}
+
+footer {
+    padding: 5px;
+}
