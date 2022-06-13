@@ -27,3 +27,9 @@ textarea {
     display: flex;
     justify-content: center;
 }
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

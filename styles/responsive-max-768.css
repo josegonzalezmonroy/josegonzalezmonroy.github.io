@@ -19,9 +19,36 @@
     padding-left: 10px;
 }
 
-.avatar-mini,
-.cabecalho {
+.avatar-mini{
     display: none;
+}
+
+.cabecalho{
+    padding: 0 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-interna {
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#nav-apresentacao{
+    margin-left: 0%;
+}
+
+.imagem-topo {
+    width: 100%;
+    height: 180px;
 }
 
 .avatar {
@@ -93,10 +120,9 @@ h2 {
     margin: 0 25px 25px 25px;
 }
 
-#apresentacao-p {
-    margin: 0 25px;
-    font-size: 21px;
-    font-weight: 600;
+.meu-nome {
+    position: relative;
+    margin-top: -110px;
 }
 
 .apresentacao {
@@ -105,12 +131,32 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
 
+#apresentacao-p {
+    margin: 0 25px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+#estudos-list,
+.exp-list {
+    margin-left: 10%;
+    line-height: 30px;
+    list-style-type: disc;
+    width: 85%;
 }
 
 .cards {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-projeto{
+    margin: 10px;
 }
 
 .redes-sociais {

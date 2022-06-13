@@ -1,0 +1,7 @@
+.avatar-mini {
+    height: 58px;
+    min-width: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20%;
+}
