@@ -1,0 +1,121 @@
+.estudos,
+.experiencia,
+.projetos,
+.contato,
+.contato-formulario,
+.footer {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.estudos,
+.experiencia {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.avatar-mini,
+.cabecalho {
+    display: none;
+}
+
+.avatar {
+    position: relative;
+    top: -140px;
+    left: 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 3px 2px #707070;
+}
+
+.avatar-conteudo {
+    border-radius: 50%;
+    height: 224px;
+    width: 224px;
+    overflow: hidden;
+}
+
+.avatar-imagem {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.github-icon,
+.linkedin-icon,
+.stack-icon {
+    position: absolute;
+    bottom: -26px;
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px #000000;
+}
+
+.github-icon:hover,
+.linkedin-icon:hover,
+.stack-icon:hover {
+    box-shadow: 0px 0px 10px #707070;
+}
+
+.linkedin-icon {
+    left: calc(50% - 26px);
+}
+
+.github-icon {
+    left: calc(20% - 26px);
+}
+
+.stack-icon {
+    right: calc(20% - 26px);
+}
+
+h1,
+h2 {
+    margin: 20px;
+    text-align: center;
+    font-size: 48px;
+    height: auto;
+}
+
+.sub-h1 {
+    font-size: 34px;
+    font-weight: lighter;
+    font-style: italic;
+    height: auto;
+    margin: 0 25px 25px 25px;
+}
+
+#apresentacao-p {
+    margin: 0 25px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.apresentacao {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-sociais {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
