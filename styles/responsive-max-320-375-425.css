@@ -178,6 +178,12 @@ textarea {
 
 }
 
+#gmail-icon,
+#instagram-icon,
+#twitter-icon {
+    max-height: calc(65px*.75);
+}
+
 #formulario {
     width: 100%;
 }
