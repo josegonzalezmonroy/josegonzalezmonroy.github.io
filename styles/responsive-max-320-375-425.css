@@ -1,3 +1,22 @@
+@media screen and (max-width: 320px) {
+    .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-projeto{
+        width: auto;
+    }
+
+    #botoes-form {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 body {
     background-color: #000000;
     display: grid;
@@ -18,12 +37,10 @@ body {
     align-items: center;
     padding-top: 10px;
     padding-bottom: 25px;
+    padding-left: auto;
+    padding-right: auto;
 }
 
-.estudos, .experiencia{
-    padding-right: 10px;
-    padding-left: 10px;
-}
 
 .avatar-mini,
 .cabecalho {
@@ -86,33 +103,41 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding-left: auto;
+    padding-right: auto;
 }
 
 h1,
 h2 {
     margin: 20px;
     text-align: center;
-    font-size: 48px;
+    font-size: calc(48px*.75);
     height: auto;
 }
 
-.sub-h1{
-    font-size: 34px;
+.sub-h1 {
+    font-size: calc(34px*.75);
     font-weight: lighter;
     font-style: italic;
     height: auto;
-    margin:0 25px 25px 25px;
+    margin: 0 25px 25px 25px;
 }
 
-#apresentacao-p {
-    margin:0 25px;
-    font-size: 21px;
+
+#apresentacao-p{
+    font-size: calc(21px*.75);
+}
+
+#estudo-titulo,
+.exp-titulo,
+.projeto-titulo {
+    font-size: calc(21px*.85);
     font-weight: 600;
 }
 
-.experiencia {
-    background-color: #434343;
+#estudo-info,
+.exp-info, label, p {
+    font-size: calc(13px*.85);
 }
 
 .cards {
@@ -121,30 +146,40 @@ h2 {
     align-items: center;
 }
 
+.button-card,
+.button {
+    font-size: calc(12px*.85);
+}
+
 input {
     margin-bottom: 15px;
     height: 34px;
-    width: 330px;
+    width: 100%;
     border-radius: 10px;
     border: #000000;
 }
 
 textarea {
-    width: 330px;
+    width: 100%;
     border-radius: 10px;
     border: #000000;
 }
 
 #botoes-form {
     margin-top: 10px;
-    width: 330px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .contato,
-.contato-formulario{
+.contato-formulario {
     background-color: #000000;
+
+}
+
+#formulario {
+    width: 100%;
 }
 
 footer {

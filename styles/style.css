@@ -46,13 +46,14 @@ body {
     color: #ffffff;
 }
 
-#nav-apresentacao{
+#nav-apresentacao {
     margin-left: 15%;
 }
 
-.nav-interna:hover{
+.nav-interna:hover {
     background-color: #707070;
 }
+
 .apresentacao {
     background-color: #ffffff;
     grid-column: 1 / 5;
@@ -100,7 +101,9 @@ body {
     box-shadow: 0px 1px 3px #000000;
 }
 
-.github-icon:hover, .linkedin-icon:hover, .stack-icon:hover{
+.github-icon:hover,
+.linkedin-icon:hover,
+.stack-icon:hover {
     box-shadow: 0px 0px 10px #707070;
 }
 
@@ -282,7 +285,7 @@ em {
     padding: 9px 9px 9px 9px;
 }
 
-#button-a{
+#button-a {
     text-decoration: none;
     color: #ffffff;
 }
@@ -291,7 +294,7 @@ em {
     box-shadow: 0px 0px 6px #707070;
 }
 
-.button-card:active{
+.button-card:active {
     background-color: #000000;
 }
 
@@ -385,11 +388,11 @@ textarea {
     margin-right: 10px;
 }
 
-.button:hover{
+.button:hover {
     box-shadow: 0px 0px 10px #707070;
 }
 
-.button:active{
+.button:active {
     background-color: #000000;
 }
 
