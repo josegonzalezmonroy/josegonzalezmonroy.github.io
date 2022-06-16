@@ -126,6 +126,7 @@ h2 {
 
 #apresentacao-p{
     font-size: calc(21px*.75);
+    line-height: 25px;
 }
 
 #estudo-titulo,
