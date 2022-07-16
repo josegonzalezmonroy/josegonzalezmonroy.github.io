@@ -197,14 +197,16 @@
             <h3 id="contato-titleh3">Se preferir, deixe uma mensagem</h3>
         </legend>
         <form id="formulario">
-            <label>Nome<br><input type="text" name="nome" required></label><br>
-            <label>Sobrenome<br><input type="text" name="sobrenome" required></label><br>
-            <label>Email<br><input type="email" name="email" required></label><br>
-            <label for="note">Sua mensagem</label><br>
-            <textarea name="note" id="note" cols="30" rows="10" placeholder="Escreva sua mensagem aquí"></textarea><br>
+            <label>Nome<span id="erro-nome"></span><br><input id="nome" type="text" name="nome" placeholder="Seu nome" required></label><br>
+            <label>Sobrenome<span id="erro-sobrenome"></span><br><input id="sobrenome" type="text" name="sobrenome" placeholder='Seu sobrenome' required></label><br>
+            <label>Email<span id="erro-email"></span><br><input id="email" type="text" name="email" placeholder="seuemail@domain.com"required></label><br>
+            <label for="note">Sua mensagem <span id="erro-mensagem"></span></label><br>
+            <textarea id="mensagem" name="note" id="note" cols="30" rows="10" placeholder="Escreva sua mensagem aquí"
+                required></textarea><br>
+                <span id="sucesso"></span>
             <div id="botoes-form">
-                <input class="button" type="reset" value="Limpar formulário">
-                <input class="button" type="submit" value="Enviar">
+                <input id="limpar" class="button" type="reset" value="Limpar formulário">
+                <input id="enviar" class="button" type="submit" value="Enviar">
             </div>
         </form>
     </section>
