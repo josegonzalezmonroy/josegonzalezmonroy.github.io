@@ -8,19 +8,21 @@ let erroSobrenome = document.querySelector('#erro-sobrenome')
 let erroEmail = document.querySelector('#erro-email')
 let erroMensagem = document.querySelector('#erro-mensagem')
 
-
 function validacaoCampos() {
     document.getElementById('sucesso').textContent = ''
-    if (nome.value == '') {//nome
+    //nome
+    if (nome.value == '') {
         erroNome.textContent = ' Obrigatório'
         nome.classList.add('erro')
         nome.focus()
     } else if (nome.value.length < 2) {
         erroNome.textContent = ' Por favor escreva um formato de nome válido'
         nome.focus()
-        
-        
-    } else if (sobrenome.value == '') {//sobrenome
+    } else if (nome.value.search(/^[a-z ,.'-]+$/)) {//regex para validar o nome
+        erroNome.textContent = ' Esta opção só admite letras'
+
+        //sobrenome
+    } else if (sobrenome.value == '') {
         sobrenome.disabled = false
         erroNome.textContent = ''
         erroSobrenome.textContent = ' Obrigatório'
@@ -29,21 +31,22 @@ function validacaoCampos() {
     } else if (sobrenome.value.length < 2) {
         erroSobrenome.textContent = ' Por favor escreva um formato de sobrenome válido'
         sobrenome.focus()
+    } else if (sobrenome.value.search(/^[a-z ,.'-]+$/)) {//regex para validar o sobrenome
+        erroSobrenome.textContent = ' Esta opção só admite letras'
 
-
-
-    } else if (email.value == '') {//email
+        //email
+    } else if (email.value == '') {
         erroNome.textContent = ''
         erroSobrenome.textContent = ''
         erroMensagem.textContent = ''
         erroEmail.textContent = ' Obrigatório'
         email.classList.add('erro')
         email.focus()
-    }else if (email.value.search(/\S+@\S+\.\S+/)){
-        erroEmail.textContent=' Formato de email não válido'
-    
+    } else if (email.value.search(/^[\w]+@{1}[\w]+\.[a-z]{2,4}$/)) {//regex para validar o email
+        erroEmail.textContent = ' Formato de email não válido'
 
-    } else if (mensagem.value == '') {//mensagem
+        //mensagem
+    } else if (mensagem.value == '') {
         erroNome.textContent = ''
         erroSobrenome.textContent = ''
         erroEmail.textContent = ''
@@ -53,6 +56,8 @@ function validacaoCampos() {
     } else if (mensagem.value.length < 10) {
         erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa'
         mensagem.focus()
+
+        //opcões finais
     } else {
 
         document.getElementById('sucesso').textContent = 'Informacões enviadas com sucesso'
