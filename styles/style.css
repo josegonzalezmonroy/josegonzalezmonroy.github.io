@@ -430,5 +430,10 @@ footer {
     justify-content: center;
     color: green;
     text-transform: uppercase;
+    width: 400px;
+}
 
+.erro{
+    color: white;
+    background-color: rgb(255, 101, 101);
 }
