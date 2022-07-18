@@ -2,74 +2,98 @@ let nome = document.querySelector('#nome')
 let sobrenome = document.querySelector('#sobrenome')
 let email = document.querySelector('#email')
 let mensagem = document.querySelector('#mensagem')
+let botaoEnviar = document.querySelector('#enviar')
 
 let erroNome = document.querySelector('#erro-nome')
 let erroSobrenome = document.querySelector('#erro-sobrenome')
 let erroEmail = document.querySelector('#erro-email')
 let erroMensagem = document.querySelector('#erro-mensagem')
 
-function validacaoCampos() {
-    document.getElementById('sucesso').textContent = ''
-    //nome
-    if (nome.value == '') {
+//nome
+function validacaoNome() {
+    if (nome.value.length == 0) {
         erroNome.textContent = ' Obrigatório'
         nome.classList.add('erro')
         nome.focus()
-    } else if (nome.value.length < 2) {
+        return
+    } else if (nome.value.length <= 1) {
+        nome.classList.remove('erro')
         erroNome.textContent = ' Por favor escreva um formato de nome válido'
-        nome.focus()
-    } else if (nome.value.search(/^[a-z ,.'-]+$/)) {//regex para validar o nome
+        return
+    }
+    else if (nome.value.match(/[0-9]/)) {//regex para validar o nome
         erroNome.textContent = ' Esta opção só admite letras'
+        return
+    }
+    nome.classList.remove('erro')
+    erroNome.textContent = ''
+    return 1
+}
 
-        //sobrenome
-    } else if (sobrenome.value == '') {
-        sobrenome.disabled = false
-        erroNome.textContent = ''
+//sobrenome
+function validacaoSobrenome() {
+    if (sobrenome.value.length == 0) {
         erroSobrenome.textContent = ' Obrigatório'
         sobrenome.classList.add('erro')
         sobrenome.focus()
-    } else if (sobrenome.value.length < 2) {
+        return
+    } else if (sobrenome.value.length <= 1) {
+        sobrenome.classList.remove('erro')
         erroSobrenome.textContent = ' Por favor escreva um formato de sobrenome válido'
-        sobrenome.focus()
-    } else if (sobrenome.value.search(/^[a-z ,.'-]+$/)) {//regex para validar o sobrenome
+        return
+    }
+    else if (sobrenome.value.match(/[0-9]/)) {//regex para validar o sobrenome
         erroSobrenome.textContent = ' Esta opção só admite letras'
+        return
+    }
+    sobrenome.classList.remove('erro')
+    erroSobrenome.textContent = ''
+    return 1
+}
 
-        //email
-    } else if (email.value == '') {
-        erroNome.textContent = ''
-        erroSobrenome.textContent = ''
-        erroMensagem.textContent = ''
+//email
+function validacaoEmail() {
+    if (email.value == '') {
         erroEmail.textContent = ' Obrigatório'
         email.classList.add('erro')
         email.focus()
-    } else if (email.value.search(/^[\w]+@{1}[\w]+\.[a-z]{2,4}$/)) {//regex para validar o email
+        return
+    }else if (email.value.search(/^[\w]+@{1}[\w]+\.[a-z]{2,4}$/)) {//regex para validar o email
         erroEmail.textContent = ' Formato de email não válido'
-
-        //mensagem
-    } else if (mensagem.value == '') {
-        erroNome.textContent = ''
-        erroSobrenome.textContent = ''
-        erroEmail.textContent = ''
-        erroMensagem.textContent = ' Obrigatório'
+        return
+    }
+    email.classList.remove('erro')
+    erroEmail.textContent = '' 
+    return 1
+}
+function validacaoMensagem() {
+    if (mensagem.value == '') {
         mensagem.classList.add('erro')
         mensagem.focus()
-    } else if (mensagem.value.length < 10) {
-        erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa'
-        mensagem.focus()
-
-        //opcões finais
-    } else {
-
-        document.getElementById('sucesso').textContent = 'Informacões enviadas com sucesso'
-        erroNome.textContent = ''
-        erroSobrenome.textContent = ''
-        erroEmail.textContent = ''
-        erroMensagem.textContent = ''
-
-        document.querySelector('form').reset()
-
+        return
+    }else if (mensagem.value.length < 10) {
+        erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa' 
+        return
     }
+    mensagem.classList.remove('erro')
+    erroMensagem.textContent = '' 
+    return 1
 }
+
+function validacao() {
+    if (validacaoNome() == 1 && validacaoSobrenome() == 1 && validacaoEmail() == 1 && validacaoMensagem() == 1) {
+        botaoEnviar.disabled = false
+        botaoEnviar.classList.add('botaoEnabled')
+
+    }    
+    else{console.log(':(')}
+}
+
+function enviarDados(){
+    console.log('enviado')
+    botaoEnviar.disabled = true
+}
+
 
 function limpar() {//criei essa function para poder limpar de maneira geral o fomulário
     document.getElementById('sucesso').textContent = ''
@@ -86,13 +110,16 @@ function limpar() {//criei essa function para poder limpar de maneira geral o fo
 }
 
 
-document.querySelector('#enviar').addEventListener('click', function (event) { event.preventDefault() })
-document.querySelector('#enviar').addEventListener('click', validacaoCampos)
+botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
+botaoEnviar.addEventListener('click',enviarDados)
 
-document.querySelector('#nome').addEventListener(('click', 'keypress'), () => nome.classList.remove('erro'))
-document.querySelector('#sobrenome').addEventListener(('click', 'keypress'), () => sobrenome.classList.remove('erro'))
-document.querySelector('#email').addEventListener(('click', 'keypress'), () => email.classList.remove('erro'))
-document.querySelector('#mensagem').addEventListener(('click', 'keypress'), () => mensagem.classList.remove('erro'))
+document.querySelector('input#enviar').addEventListener('click', validacao)
+mensagem.addEventListener('keypress',validacao)
 
 
-document.querySelector('#limpar').addEventListener('click', limpar)
+//validacoes dos input
+nome.addEventListener('keydown', validacaoNome)
+sobrenome.addEventListener('keydown', validacaoSobrenome)
+email.addEventListener('keydown', validacaoEmail)
+mensagem.addEventListener('keydown', validacaoMensagem)
+
