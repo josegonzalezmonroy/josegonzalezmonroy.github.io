@@ -11,7 +11,7 @@ const cepValido = (cep) => cep.length == 8 && eNumero(cep)
 
 const pesquisarCEP = async () => {
     const cep = document.getElementById('cep').value
-    const url = `http://viacep.com.br/ws/${cep}/json/`
+    const url = `https://viacep.com.br/ws/${cep}/json/`
     if (cepValido(cep)) {
         const dados = await fetch(url)//await permite esperar para resolver paso a paso
         const endereco = await dados.json()
