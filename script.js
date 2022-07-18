@@ -3,6 +3,7 @@ let sobrenome = document.querySelector('#sobrenome')
 let email = document.querySelector('#email')
 let mensagem = document.querySelector('#mensagem')
 let botaoEnviar = document.querySelector('#enviar')
+let botaoLimpar = document.querySelector('#limpar')
 
 let erroNome = document.querySelector('#erro-nome')
 let erroSobrenome = document.querySelector('#erro-sobrenome')
@@ -66,8 +67,11 @@ function validacaoEmail() {
     erroEmail.textContent = ''
     return 1
 }
+
+//mensagem
 function validacaoMensagem() {
     if (mensagem.value == '') {
+        erroMensagem.textContent = ' Obrigatório'
         mensagem.classList.add('erro')
         mensagem.focus()
         return
@@ -80,6 +84,7 @@ function validacaoMensagem() {
     return 1
 }
 
+//validacao geral
 function validacao() {
     if (validacaoNome() == 1 && validacaoSobrenome() == 1 && validacaoEmail() == 1 && validacaoMensagem() == 1) {
         botaoEnviar.disabled = false
@@ -87,46 +92,43 @@ function validacao() {
 
     }
     else {
+        document.getElementById('sucesso').textContent = ''
         botaoEnviar.disabled = true
         botaoEnviar.classList.remove('botaoEnabled')
     }
 }
 
-function enviarDados() {
-    
-    limpar()
-    console.log('enviado')
+function enviarDados() {//falso envio de dados :D
+    document.querySelector('form').reset()
+    document.getElementById('sucesso').textContent = 'Dados enviados com sucesso'
+
 }
 
 
-function limpar() {//criei essa function para poder limpar de maneira geral o fomulário
-    document.getElementById('sucesso').textContent = 'Enviado'
-    nome.value=''
-    sobrenome.value=''
-    email.value=''
-    mensagem.value=''
+function limpar() {//criei essa function para poder limpar de maneira geral o fomulário :D
+    document.getElementById('sucesso').textContent = ''
     erroNome.textContent = ''
-    /*erroSobrenome.textContent = ''
+    erroSobrenome.textContent = ''
     erroEmail.textContent = ''
     erroMensagem.textContent = ''
+
     nome.classList.remove('erro')
     sobrenome.classList.remove('erro')
     email.classList.remove('erro')
     mensagem.classList.remove('erro')
-*/
+    document.querySelector('form').reset()
 }
 
-
+//eventos
 botaoEnviar.addEventListener('click', enviarDados)
-
-document.querySelector('input#enviar').addEventListener('click', validacao)
-mensagem.addEventListener('keypress',validacao)
-
+botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
+botaoLimpar.addEventListener('click', limpar)
 
 //validacoes dos input
-nome.addEventListener('keydown', validacaoNome)
+document.querySelector('form').addEventListener('click', validacao)
+nome.addEventListener('keypress', validacaoNome)
 sobrenome.addEventListener('keydown', validacaoSobrenome)
 email.addEventListener('keydown', validacaoEmail)
 mensagem.addEventListener('keydown', validacaoMensagem)
 
-botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
+
