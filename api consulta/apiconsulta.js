@@ -1,6 +1,6 @@
 const preencherFormulario = (endereco) => {
     let elemento = document.querySelector('li')
-    elemento.textContent = 'CEP: '+endereco.cep+ ', Bairro ' + endereco.bairro+', '+endereco.logradouro + ', na cidade de ' + endereco.localidade+'-'+endereco.uf
+    elemento.textContent = 'CEP: '+endereco.cep+', Bairro ' + endereco.bairro+', '+endereco.logradouro + ', na cidade de ' + endereco.localidade+'-'+endereco.uf
     document.querySelector('#cep').value=""
     
 }
@@ -29,3 +29,6 @@ document.querySelector('#botaoRegistrar').addEventListener('click', function (ev
 })
 document.getElementById('botaoRegistrar')
     .addEventListener('click', pesquisarCEP)
+
+
+

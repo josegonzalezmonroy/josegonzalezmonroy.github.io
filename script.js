@@ -125,7 +125,7 @@ botaoEnviar.addEventListener('click', enviarDados)
 botaoLimpar.addEventListener('click', limpar)
 
 //validacoes dos input
-document.querySelector('form').addEventListener(('click','mouseover'), validacao)
+document.querySelector('#formulario').addEventListener(('click','mouseover'), validacao)
 nome.addEventListener(('click','input'), validacaoNome)
 sobrenome.addEventListener(('click','input'), validacaoSobrenome)
 email.addEventListener(('click','input'), validacaoEmail)
