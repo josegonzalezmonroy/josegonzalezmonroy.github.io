@@ -430,7 +430,7 @@ footer {
     justify-content: center;
     color: green;
     text-transform: uppercase;
-    width: 400px;
+    width: 100%;
 }
 
 .erro{

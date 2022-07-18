@@ -58,12 +58,12 @@ function validacaoEmail() {
         email.classList.add('erro')
         email.focus()
         return
-    }else if (email.value.search(/^[\w]+@{1}[\w]+\.[a-z]{2,4}$/)) {//regex para validar o email
+    } else if (email.value.search(/^[\w]+@{1}[\w]+\.[a-z]{2,4}$/)) {//regex para validar o email
         erroEmail.textContent = ' Formato de email não válido'
         return
     }
     email.classList.remove('erro')
-    erroEmail.textContent = '' 
+    erroEmail.textContent = ''
     return 1
 }
 function validacaoMensagem() {
@@ -71,12 +71,12 @@ function validacaoMensagem() {
         mensagem.classList.add('erro')
         mensagem.focus()
         return
-    }else if (mensagem.value.length < 10) {
-        erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa' 
+    } else if (mensagem.value.length < 10) {
+        erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa'
         return
     }
     mensagem.classList.remove('erro')
-    erroMensagem.textContent = '' 
+    erroMensagem.textContent = ''
     return 1
 }
 
@@ -85,33 +85,39 @@ function validacao() {
         botaoEnviar.disabled = false
         botaoEnviar.classList.add('botaoEnabled')
 
-    }    
-    else{console.log(':(')}
+    }
+    else {
+        botaoEnviar.disabled = true
+        botaoEnviar.classList.remove('botaoEnabled')
+    }
 }
 
-function enviarDados(){
+function enviarDados() {
+    
+    limpar()
     console.log('enviado')
-    botaoEnviar.disabled = true
 }
 
 
 function limpar() {//criei essa function para poder limpar de maneira geral o fomulário
-    document.getElementById('sucesso').textContent = ''
+    document.getElementById('sucesso').textContent = 'Enviado'
+    nome.value=''
+    sobrenome.value=''
+    email.value=''
+    mensagem.value=''
     erroNome.textContent = ''
-    erroSobrenome.textContent = ''
+    /*erroSobrenome.textContent = ''
     erroEmail.textContent = ''
     erroMensagem.textContent = ''
     nome.classList.remove('erro')
     sobrenome.classList.remove('erro')
     email.classList.remove('erro')
     mensagem.classList.remove('erro')
-    document.querySelector('form').reset()
-
+*/
 }
 
 
-botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
-botaoEnviar.addEventListener('click',enviarDados)
+botaoEnviar.addEventListener('click', enviarDados)
 
 document.querySelector('input#enviar').addEventListener('click', validacao)
 mensagem.addEventListener('keypress',validacao)
@@ -123,3 +129,4 @@ sobrenome.addEventListener('keydown', validacaoSobrenome)
 email.addEventListener('keydown', validacaoEmail)
 mensagem.addEventListener('keydown', validacaoMensagem)
 
+botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
