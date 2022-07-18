@@ -1,0 +1,14 @@
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.api{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/5;
+    padding: 6rem;
+    height: 400px;
+}
