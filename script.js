@@ -120,15 +120,16 @@ function limpar() {//criei essa function para poder limpar de maneira geral o fo
 }
 
 //eventos
-botaoEnviar.addEventListener('click', enviarDados)
 botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
+botaoEnviar.addEventListener('click', enviarDados)
 botaoLimpar.addEventListener('click', limpar)
 
 //validacoes dos input
-document.querySelector('form').addEventListener('click', validacao)
-nome.addEventListener('keypress', validacaoNome)
-sobrenome.addEventListener('keydown', validacaoSobrenome)
-email.addEventListener('keydown', validacaoEmail)
-mensagem.addEventListener('keydown', validacaoMensagem)
+document.querySelector('form').addEventListener(('click','mouseover'), validacao)
+nome.addEventListener('input', validacaoNome)
+sobrenome.addEventListener('input', validacaoSobrenome)
+email.addEventListener('input', validacaoEmail)
+mensagem.addEventListener('input', (validacaoMensagem,validacao))
+
 
 
