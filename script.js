@@ -126,10 +126,10 @@ botaoLimpar.addEventListener('click', limpar)
 
 //validacoes dos input
 document.querySelector('form').addEventListener(('click','mouseover'), validacao)
-nome.addEventListener('input', validacaoNome)
-sobrenome.addEventListener('input', validacaoSobrenome)
-email.addEventListener('input', validacaoEmail)
-mensagem.addEventListener('input', (validacaoMensagem,validacao))
+nome.addEventListener(('click','input'), validacaoNome)
+sobrenome.addEventListener(('click','input'), validacaoSobrenome)
+email.addEventListener(('click','input'), validacaoEmail)
+mensagem.addEventListener(('click','input'), (validacaoMensagem,validacao))
 
 
 
