@@ -1,7 +1,10 @@
+#titulo{
+width: 100%;
+}
 
 h1{
     font-size: 3rem;
-    text-align: center;
+    justify-content: center;
 }
 
 .api{
@@ -11,4 +14,16 @@ h1{
     grid-column: 1/5;
     padding: 6rem;
     height: 400px;
+}
+#cep{
+    border: solid;
+    border-width: .2rem;
+    border-color:black;
+}
+
+#botaoRegistrar{
+    height: 2.5rem;
+    border-radius: 9999px;
+    background-color: black;
+    color:white;
 }
