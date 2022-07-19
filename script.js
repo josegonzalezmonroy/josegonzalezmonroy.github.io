@@ -13,6 +13,8 @@ let erroMensagem = document.querySelector('#erro-mensagem')
 //nome
 function validacaoNome() {
     if (nome.value.length == 0) {
+        document.getElementById('sucesso').textContent = ''
+        botaoEnviar.classList.remove('botaoEnabled')
         erroNome.textContent = ' Obrigatório'
         nome.classList.add('erro')
         nome.focus()
@@ -81,20 +83,14 @@ function validacaoMensagem() {
     }
     mensagem.classList.remove('erro')
     erroMensagem.textContent = ''
+    botaoEnviar.classList.add('botaoEnabled')
     return 1
 }
 
 //validacao geral
 function validacao() {
     if (validacaoNome() == 1 && validacaoSobrenome() == 1 && validacaoEmail() == 1 && validacaoMensagem() == 1) {
-        botaoEnviar.disabled = false
-        botaoEnviar.classList.add('botaoEnabled')
-
-    }
-    else {
-        document.getElementById('sucesso').textContent = ''
-        botaoEnviar.disabled = true
-        botaoEnviar.classList.remove('botaoEnabled')
+        enviarDados()
     }
 }
 
@@ -121,15 +117,14 @@ function limpar() {//criei essa function para poder limpar de maneira geral o fo
 
 //eventos
 botaoEnviar.addEventListener('click', function (event) { event.preventDefault() })
-botaoEnviar.addEventListener('click', enviarDados)
+botaoEnviar.addEventListener('click', validacao)
 botaoLimpar.addEventListener('click', limpar)
 
 //validacoes dos input
-document.querySelector('#formulario').addEventListener(('click','mouseover'), validacao)
 nome.addEventListener(('click','input'), validacaoNome)
 sobrenome.addEventListener(('click','input'), validacaoSobrenome)
 email.addEventListener(('click','input'), validacaoEmail)
-mensagem.addEventListener(('click','input'), (validacaoMensagem,validacao))
+mensagem.addEventListener(('click','input'), validacaoMensagem)
 
 
 
