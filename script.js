@@ -14,7 +14,6 @@ let erroMensagem = document.querySelector('#erro-mensagem')
 function validacaoNome() {
     if (nome.value.length == 0) {
         document.getElementById('sucesso').textContent = ''
-        botaoEnviar.classList.remove('botaoEnabled')
         erroNome.textContent = ' Obrigatório'
         nome.classList.add('erro')
         nome.focus()
@@ -59,6 +58,7 @@ function validacaoEmail() {
     if (email.value == '') {
         erroEmail.textContent = ' Obrigatório'
         email.classList.add('erro')
+        
         email.focus()
         return
     } else if (email.value.search(/^[\w]+@{1}[\w]+\.[a-z]{2,4}$/)) {//regex para validar o email
@@ -78,18 +78,30 @@ function validacaoMensagem() {
         mensagem.focus()
         return
     } else if (mensagem.value.length < 10) {
-        erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa'
+        erroMensagem.textContent = ' Por favor escreva uma mensagem mais extensa'+' '+'('+ (10-mensagem.value.length)+')'
         return
     }
     mensagem.classList.remove('erro')
     erroMensagem.textContent = ''
-    botaoEnviar.classList.add('botaoEnabled')
     return 1
 }
 
 //validacao geral
 function validacao() {
-    if (validacaoNome() == 1 && validacaoSobrenome() == 1 && validacaoEmail() == 1 && validacaoMensagem() == 1) {
+
+    if (nome.value.length==''){
+        validacaoNome()
+    }
+    else if(sobrenome.value.length==''){
+        validacaoSobrenome()
+    }
+    else if(email.value.length==''){
+        validacaoEmail()
+    }
+    else if(mensagem.value.length<10){
+        validacaoMensagem()
+    }
+    else if(validacaoNome() == 1 && validacaoSobrenome() == 1 && validacaoEmail() == 1 && validacaoMensagem() == 1) {
         enviarDados()
     }
 }
@@ -121,10 +133,10 @@ botaoEnviar.addEventListener('click', validacao)
 botaoLimpar.addEventListener('click', limpar)
 
 //validacoes dos input
-nome.addEventListener(('click','input'), validacaoNome)
-sobrenome.addEventListener(('click','input'), validacaoSobrenome)
-email.addEventListener(('click','input'), validacaoEmail)
-mensagem.addEventListener(('click','input'), validacaoMensagem)
+nome.addEventListener('input', validacaoNome)
+sobrenome.addEventListener('input', validacaoSobrenome)
+email.addEventListener('input', validacaoEmail)
+mensagem.addEventListener('input', validacaoMensagem)
 
 
 
