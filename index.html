@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Meu Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1 id="pequeno">JG</h1>
+        <h1 id="inteiro">Jose Gregorio</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="images">
+            <img src="img/sobre.jpg" alt="imagen de codigos" class="img-sobre"> 
+            <img src="img/profile.jpg" alt="foto de perfil" class="foto">
+        </div>
+        <section id="sobre">
+            <div class="conteudo">
+                <h2>Sobre</h2>
+                <p>Olá, meu nome é <strong>Jose Gregorio</strong>. Sou um desenvolvedor trainee com foco em Java, tendo iniciado minha jornada com o livro Deitel. Possuo conhecimentos em bancos de dados SQL e NoSQL, além de Git para controle de versões. Também tenho familiaridade com tecnologias web, como HTML, CSS e JavaScript.</p>
+            </div>
+        </section>
+        
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="projeto">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1</p>
+            </div>
+            <div class="projeto">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2</p>
+            </div>
+            <div class="projeto">
+                <h3>Projeto 3</h3>
+                <p>Descrição do projeto 3</p>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form action="enviar.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="seuemail@domain.com" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem aquí"
+                required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Jose</p>
+    </footer>
+</body>
+</html>

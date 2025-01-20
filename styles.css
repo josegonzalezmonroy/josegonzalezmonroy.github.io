@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth; /* Habilita a rolagem suave */
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: red;
+}
+
+header{
+    background-color: #343633;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    padding: 0px 18px;
+    z-index: 1000;
+}
+
+section{
+    background-color: red;
+    padding: 50px 20px 50px 20px;
+}
+
+nav{
+    width: 65%;
+}
+
+h1{
+    font-size: 28px;
+    font-style: bold;
+    color: rgb(92, 200, 255);
+}
+
+#inteiro{
+    display: none;
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}   
+
+strong{
+    font-weight: bolder;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    height: 50px;
+    transition: all 0.3s linear;
+    padding: 0px 6px;
+}
+
+li{
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+a:hover{
+    background-color: rgb(92, 200, 255);
+    color: black;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.images{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.img-sobre{
+    padding: 0px 0px;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.foto{
+    position: absolute;
+    margin: 8px;
+    border-radius: 50%;
+    border: 1px solid #343633;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 140px;
+    height: 140px;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    background-color: white;
+}
+
+#sobre h2{
+    color:#343633;
+}
+
+#contato h2{
+    color: #343633;
+}
+
+#sobre p{
+    color: #343633;
+    font-size: 16px;
+    text-align: justify;
+    font-style: oblique;
+    line-height: 1.6;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#projetos{
+    background-color: #343633;
+    color: azure;
+}
+
+#contato{
+    background-color: #5CC8FF;
+}
+
+footer{
+    width: 100%;
+    background-color: #343633;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
