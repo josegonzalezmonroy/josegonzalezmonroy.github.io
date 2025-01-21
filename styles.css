@@ -3,8 +3,7 @@ html {
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: red;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -27,7 +26,7 @@ section{
 }
 
 nav{
-    width: 67%;
+    width: 75%;
 }
 
 h1{
@@ -56,7 +55,7 @@ strong{
     font-weight: bolder;
 }
 
-a{
+header a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +63,7 @@ a{
     color: white;
     font-size: 16px;
     height: 50px;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease;
     padding: 0px 6px;
 }
 
@@ -163,7 +162,7 @@ p{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     color: white;
     margin: 20px 0px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .button{
@@ -171,6 +170,11 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    transition: all .3s ease;
+}
+
+.button:hover{
+    transform: scale(1.1);
 }
 
 .projeto a{
@@ -195,8 +199,74 @@ p{
     color: #343633;
 }
 
+#contato h3{
+    color: #343633;
+    font-size: 16px;
+    margin: 30px 10px 10px;
+}
+
 #contato{
     background-color: #5CC8FF;
+    display: flex;
+    flex-direction: column;
+}
+
+.icones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icones a {
+  display: inline-block;
+  font-size: 32px; /* Tamaño de los íconos */
+  margin: 0 10px;
+  color: #343633;
+  transition: all .3s ease;
+}
+
+.icones a:hover {
+  transform: scale(1.2); 
+}
+
+i{
+    font-size: 50px;
+    margin: 0px 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(52, 54, 51, 0.2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #343633;
+}
+
+input, textarea{
+    width: 100%;
+    margin: 5px 0px 20px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #343633;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover{
+    transform: scale(1.015);
 }
 
 /* Footer */
@@ -204,6 +274,9 @@ footer{
     width: 100%;
     background-color: #343633;
     color: white;
+    padding: 5px 0px;
+}
+
+footer p{
     text-align: center;
-    padding: 10px;
 }

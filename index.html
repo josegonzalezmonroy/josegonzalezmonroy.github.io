@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="img/code-solid.svg">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio - Jose Gonzalez</title>
@@ -73,12 +78,23 @@
         </section>
         <section id="contato">
             <h2>Contato</h2>
-            <form action="enviar.php" method="post">
-                <label for="nome">Nome:</label>
+            <div class="icones">
+                <a href="https://wa.me/5541992643268?text=Olá%20Jose,%20venho%20do%20seu%20portfólio,%20gostaria%20de%20conversar%20com%20você." target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="http://github.com/josegonzalezmonroy" target="_blank">
+                <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/josegonzalezmonroy/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                </a>    
+            </div>
+            <h3>Deixe uma mensagem</h3>
+            <form action="" method="post">
+                <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
-                <label for="email">Email:</label>
+                <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="seuemail@domain.com" required>
-                <label for="mensagem">Mensagem:</label>
+                <label for="mensagem">Mensagem</label>
                 <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem aquí"
                 required></textarea>
                 <button type="submit">Enviar</button>
