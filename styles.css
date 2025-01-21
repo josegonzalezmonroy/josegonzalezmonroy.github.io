@@ -27,7 +27,7 @@ section{
 }
 
 nav{
-    width: 65%;
+    width: 67%;
 }
 
 h1{
@@ -42,7 +42,7 @@ h1{
 
 h2{
     font-size: 22px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
     font-weight: bolder;
 }   
 
@@ -77,17 +77,25 @@ ul{
     justify-content: space-around;
 }
 
-a:hover{
-    background-color: rgb(92, 200, 255);
-    color: black;
+p{
+    text-align: justify;
+    font-style: oblique;
+    line-height: 1.6;
 }
 
+/* Menu */
 .menu{
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
+.menu a:hover{
+    background-color: rgb(92, 200, 255);
+    color: black;
+}
+
+/* Sobre */
 .images{
     padding-top: 50px;
     display: flex;
@@ -124,6 +132,18 @@ a:hover{
     color:#343633;
 }
 
+#sobre p{
+    color: #343633;
+    font-size: 18px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Projetos */
 #projetos{
     background-color: #343633;
     color: azure;
@@ -146,27 +166,40 @@ a:hover{
     padding: 10px;
 }
 
-#contato h2{
-    color: #343633;
+.button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#sobre p{
-    color: #343633;
-    font-size: 18px;
-    text-align: justify;
-    font-style: oblique;
-    line-height: 1.6;
+.projeto a{
+    padding: 0px;
+    height: 35px;
+    margin: 10px 0px;
 }
-.conteudo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+
+.projeto button{
+    background-color: #5CC8FF;
+    color: #343633;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 0px 10px;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* Contato */
+#contato h2{
+    color: #343633;
 }
 
 #contato{
     background-color: #5CC8FF;
 }
 
+/* Footer */
 footer{
     width: 100%;
     background-color: #343633;
