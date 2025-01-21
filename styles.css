@@ -352,7 +352,7 @@ footer p{
     }
 
     form{
-        width: 50%;
+        width: 70%;
     }
 
     #contato{
@@ -449,5 +449,9 @@ footer p{
 
     i{
         font-size: 70px;
+    }
+
+    form{
+        width: 50%;
     }
 }
