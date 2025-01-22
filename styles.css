@@ -36,7 +36,7 @@ nav{
 }
 
 h1{
-    font-size: 30px;
+    font-size: 1.8rem;
     font-style: bold;
     color: rgb(92, 200, 255);
 }
@@ -46,16 +46,18 @@ h1{
 }
 
 h2{
-    font-size: 22px;
+    font-size: 1.65rem;
     margin: 30px 0px;
     font-weight: bolder;
     text-align: center;
 }   
 
 h3{
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 20px;
     font-weight: bolder;
+    text-align: center;
+    width: 100%;
 }
 
 strong{
@@ -68,7 +70,7 @@ header a{
     align-items: center;
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     height: 50px;
     transition: all 0.3s ease;
     padding: 0px 6px;
@@ -140,7 +142,6 @@ p{
 
 #sobre p{
     color: #343633;
-    font-size: 18px;
 }
 
 .conteudo{
@@ -170,6 +171,11 @@ p{
     color: white;
     margin: 20px 0px;
     padding: 20px;
+}
+
+#tecnologias{
+    width: 100%;
+    text-align: center;
 }
 
 .button{
@@ -214,11 +220,6 @@ p{
     align-items: center;
 }
 
-#projetos i{
-    font-size: 40px;
-    margin: 0px 10px;
-}
-
 /* Contato */
 #contato h2{
     color: #343633;
@@ -226,7 +227,6 @@ p{
 
 #contato h3{
     color: #343633;
-    font-size: 16px;
     margin: 30px 10px 10px;
 }
 
@@ -318,24 +318,12 @@ footer p{
         width: 50%;
     }
 
-    h1{
-        font-size: 28px;
-    }
-
-    h2{
-        font-size: 24px;
-    }
-
-    h3{
-        font-size: 22px;
-    }
-
     header a{
         font-size: 18px;
     }
 
     #sobre p{
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     #projetos i{
@@ -349,7 +337,7 @@ footer p{
 
     .sobre{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -441,18 +429,6 @@ footer p{
         height: 200px;
     }
 
-    h1{
-        font-size: 32px;
-    }
-
-    h2{
-        font-size: 28px;
-    }
-
-    h3{
-        font-size: 26px;
-    }
-
     header a{
         font-size: 22px;
     }
@@ -527,18 +503,6 @@ footer p{
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         width: 250px;
         height: 250px;
-    }
-
-    h1{
-        font-size: 32px;
-    }
-
-    h2{
-        font-size: 30px;
-    }
-
-    h3{
-        font-size: 26px;
     }
 
     header a{
