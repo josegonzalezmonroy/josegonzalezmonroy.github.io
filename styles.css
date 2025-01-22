@@ -565,6 +565,10 @@ footer p{
 
 @media(min-width: 1200px)
 {
+    header{
+        padding: 0% 10%;
+    }
+
     #sobre2{
         max-width: 1200px;
     }
