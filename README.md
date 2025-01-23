@@ -1,6 +1,6 @@
 # Portfólio de Jose Gonzalez
 
-Este es el repositorio de mi portfólio personal. Aquí podrás encontrar información sobre mí, mis proyectos y cómo contactarme.
+Este é o repositório do meu portfólio pessoal. Aqui você pode encontrar informações sobre mim, meus projetos e como entrar em contato comigo.
 
 ## Índice
 
