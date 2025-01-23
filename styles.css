@@ -105,11 +105,14 @@ p{
 
 /* Sobre */
 .images{
-    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+#sobre2{
+    padding: 0px 40px;
 }
 
 .img-sobre{
