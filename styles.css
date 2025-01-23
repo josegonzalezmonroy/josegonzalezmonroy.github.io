@@ -9,8 +9,8 @@ body{
 }
 
 header{
-    background-color: #343633;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #1B262C;
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -38,7 +38,7 @@ nav{
 h1{
     font-size: 1.8rem;
     font-style: bold;
-    color: rgb(92, 200, 255);
+    color: #FFFFFF;
 }
 
 #inteiro{
@@ -69,7 +69,7 @@ header a{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
     font-size: 1rem;
     height: 50px;
     transition: all 0.3s ease;
@@ -99,8 +99,8 @@ p{
 }
 
 .menu a:hover{
-    background-color: rgb(92, 200, 255);
-    color: black;
+    background-color: #FFFFFF;
+    color: #1B262C;
 }
 
 /* Sobre */
@@ -113,22 +113,25 @@ p{
 }
 
 #sobre2{
-    padding: 0px 40px;
+    padding: 20px 40px;
 }
 
 .img-sobre{
+    border-radius: 10px;
     padding: 0px 0px;
     height: 150px;
     width: 100%;
     object-fit: cover;
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
+
 }
 
 .foto{
     position: absolute;
     margin: 8px;
     border-radius: 50%;
-    border: 1px solid #343633;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1B262C;
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
     width: 140px;
     height: 140px;
 }
@@ -137,15 +140,15 @@ p{
     display: flex;
     flex-direction: column;    
     align-items: center;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 #sobre h2{
-    color:#343633;
+    color:#1B262C;
 }
 
 #sobre p{
-    color: #343633;
+    color: #1B262C;
 }
 
 .conteudo{
@@ -156,23 +159,23 @@ p{
 
 /* Projetos */
 #projetos{
-    background-color: #343633;
-    color: azure;
+    background-color: #1B262C;
+    color: #FFFFFF;
 }
 
 #projetos h2, h3{
-    color: #5CC8FF;
+    color: #1B262C;
 }
 
 .projeto{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color:rgba(147, 134, 127, 0.3);
+    background-color: #FFFFFF;
     border-radius: 10px;
-    border: solid 1px #5CC8FF;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    color: white;
+    border: solid 1px #FFFFFF;
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
+    color: #1B262C;
     margin: 20px 0px;
     padding: 20px;
 }
@@ -190,10 +193,6 @@ p{
     transition: all .3s ease;
 }
 
-.button:hover{
-    transform: scale(1.1);
-}
-
 .projeto a{
     padding: 0px;
     height: 35px;
@@ -201,14 +200,20 @@ p{
 }
 
 .projeto button{
-    background-color: #5CC8FF;
-    color: #343633;
+    background-color: #1B262C;
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
     padding: 0px 10px;
     cursor: pointer;
     height: 100%;
+}
+
+.projeto button:hover{
+    border: 1px solid #1B262C;;
+    background-color: #FFFFFF;
+    color: #1B262C;
 }
 
 #tecnologias{
@@ -226,16 +231,15 @@ p{
 
 /* Contato */
 #contato h2{
-    color: #343633;
+    color: #1B262C;
 }
 
 #contato h3{
-    color: #343633;
+    color: #1B262C;
     margin: 30px 10px 10px;
 }
 
 #contato{
-    background-color: #5CC8FF;
     display: flex;
     flex-direction: column;
 }
@@ -250,7 +254,7 @@ p{
 .icones a{
   display: inline-block;
   margin: 0 10px;
-  color: #343633;
+  color: #1B262C;
   transition: all .3s ease;
 }
 
@@ -269,10 +273,10 @@ form{
     align-items: start;
     justify-content: center;
     padding: 20px;
-    background-color: rgba(52, 54, 51, 0.2);
+    background-color:   #1B262C;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    color: #343633;
+    box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
 }
 
 input, textarea{
@@ -284,25 +288,29 @@ input, textarea{
 }
 
 form button{
-    width: 100%;
+    align-self: center;
+    width: 50%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #343633;
-    color: white;
+    border: 1px solid;
+    background-color: #FFFFFF;
+    color: #1B262C;
     cursor: pointer;
     transition: all .3s ease;
 }
 
 form button:hover{
-    transform: scale(1.015);
+    border: 1px solid #FFFFFF;
+    background-color: #1B262C;
+    color: #FFFFFF;
 }
 
 /* Footer */
 footer{
     width: 100%;
-    background-color: #343633;
-    color: white;
+    background-color: #1B262C;
+    color: #FFFFFF;
     padding: 5px 0px;
 }
 
@@ -420,15 +428,15 @@ footer p{
         height: 450px;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
     }
     
     .foto{
         position: absolute;
         margin: 8px;
         border-radius: 50%;
-        border: 1px solid #343633;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        border: 1px solid #1B262C;
+        box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
         width: 200px;
         height: 200px;
     }
@@ -495,7 +503,7 @@ footer p{
         height: 500px;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
         width: 270px;
     }
     
@@ -503,8 +511,8 @@ footer p{
         position: absolute;
         margin: 8px;
         border-radius: 50%;
-        border: 1px solid #343633;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        border: 1px solid #1B262C;
+        box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.3);
         width: 250px;
         height: 250px;
     }
