@@ -1,16 +1,19 @@
-html {
-    scroll-behavior: smooth; /* Habilita a rolagem suave */
+/* Habilita a rolagem suave */
+html{
+    scroll-behavior: smooth;
 }
-
+  
+/* Estilos gerais do corpo */
 body{
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
 }
 
+/* Estilos do cabeçalho */
 header{
-    background-color: #071359;
-    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+    background-color: #071359; /* Cor de fundo azul escuro */
+    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -22,27 +25,27 @@ header{
     z-index: 1000;
 }
 
+/* Estilos do conteúdo principal */
 main{
-    background-color: #F2F2F2;
+    background-color: #F2F2F2; /* Cor de fundo clara */
 }
 
+/* Estilos das seções */
 section{
     padding: 50px 20px 50px 20px;
     width: 100%;
 }
 
-#sobre1{
-    width: 100%;
-}
-
+/* Estilos da navegação */
 nav{
     width: 75%;
 }
 
+/* Estilos dos títulos */
 h1{
     font-size: 1.8rem;
     font-style: bold;
-    color: #F2F2F2;
+    color: #F2F2F2; /* Cor do texto clara */
 }
 
 #inteiro{
@@ -54,70 +57,65 @@ h2{
     margin: 30px 0px;
     font-weight: bolder;
     text-align: center;
-}   
+}
 
 h3{
     font-size: 1.25rem;
     margin-bottom: 20px;
     font-weight: bolder;
-    text-align: center;
-    width: 100%;
+    align-self: center;
 }
 
 strong{
     font-weight: bolder;
 }
 
+/* Estilos dos links no cabeçalho */
 header a{
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #F2F2F2;
+    color: #F2F2F2; /* Cor do texto clara */
     font-size: 1rem;
     height: 50px;
     transition: all 0.3s ease;
     padding: 0px 6px;
 }
 
+/* Estilos das listas */
 li{
     width: 100%;
 }
 
-ul{
-    display: flex;
-    justify-content: space-around;
-}
-
+/* Estilos dos parágrafos */
 p{
     text-align: justify;
     font-style: oblique;
     line-height: 1.6;
 }
 
-/* Menu */
+/* Estilos do menu */
 .menu{
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 
 .menu a:hover{
-    background-color: #F2F2F2;
-    color: #071359;
+    background-color: #F2F2F2; /* Cor de fundo clara */
+    color: #071359; /* Cor do texto azul escuro */
 }
 
-/* Sobre */
+/* Estilos da seção Sobre */
 .images{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding-top: 70px;
 }
 
 #sobre2{
-    padding: 0px 40px;
+    padding: 0px 60px 50px 60px;
 }
 
 .img-sobre{
@@ -125,28 +123,28 @@ p{
     height: 150px;
     width: 100%;
     object-fit: cover;
-    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
 }
 
 .foto{
     position: absolute;
     margin: 8px;
     border-radius: 50%;
-    border: 1px solid #071359;
-    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+    border: 1px solid #071359; /* Borda azul escuro */
+    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
     width: 140px;
     height: 140px;
 }
 
 #sobre{
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
-    background-color: #F2F2F2;
+    background-color: #F2F2F2; /* Cor de fundo clara */
 }
 
 #sobre h2, #sobre p, #projetos h3{
-    color:#071359;
+    color: #071359; /* Cor do texto azul escuro */
 }
 
 .conteudo{
@@ -155,28 +153,33 @@ p{
     justify-content: space-around;
 }
 
-/* Projetos */
+/* Estilos da seção Projetos */
 #projetos{
-    background-color: #071359;
-    color: #F2F2F2;
+    background-color: #071359; /* Cor de fundo azul escuro */
+    color: #F2F2F2; /* Cor do texto clara */
 }
 
 .projeto{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: #F2F2F2;
+    background-color: #F2F2F2; /* Cor de fundo clara */
     border-radius: 10px;
-    border: solid 1px #F2F2F2;
-    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
-    color: #071359;
+    border: solid 1px #F2F2F2; /* Borda clara */
+    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
+    color: #071359; /* Cor do texto azul escuro */
     margin: 20px 0px;
     padding: 20px;
+    transition: all .3s ease;
+}
+
+.projeto:hover{
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 #tecnologias{
     width: 100%;
     text-align: center;
+    margin-top: 10px;
 }
 
 .button{
@@ -194,24 +197,20 @@ p{
 }
 
 .projeto button{
-    background-color: #071359;
-    color: #F2F2F2;
+    background-color: #071359; /* Cor de fundo azul escuro */
+    color: #F2F2F2; /* Cor do texto clara */
     border: none;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
     padding: 0px 10px;
     cursor: pointer;
     height: 100%;
 }
 
 .projeto button:hover{
-    border: 1px solid #071359;;
-    background-color: #F2F2F2;
-    color: #071359;
-}
-
-#tecnologias{
-    margin-top: 10px;
+    border: 1px solid #071359; /* Borda azul escuro */
+    background-color: #F2F2F2; /* Cor de fundo clara */
+    color: #071359; /* Cor do texto azul escuro */
 }
 
 #projetos .icones{
@@ -227,42 +226,28 @@ p{
     transition: all .3s ease; 
 }
 
-
-/* Contato */
+/* Estilos da seção Contato */
 #contato h2{
-    color: #071359;
+    color: #071359; /* Cor do texto azul escuro */
 }
 
 #contato h3{
-    color: #071359;
+    color: #071359; /* Cor do texto azul escuro */
     margin: 30px 10px 10px;
 }
 
-#contato{
-    display: flex;
-    flex-direction: column;
-}
-
-.icones{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .icones a{
-  display: inline-block;
-  margin: 0 10px;
-  color: #071359;
-  transition: all .3s ease;
+    display: inline-block;
+    margin: 0 10px;
+    color: #071359; /* Cor do texto azul escuro */
+    transition: all .3s ease;
 }
 
 .icones a:hover, .projeto i:hover{
-  transform: scale(1.2);
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
 }
 
 i{
-    font-size: 50px;
     margin: 0px 10px;
 }
 
@@ -272,10 +257,10 @@ form{
     align-items: start;
     justify-content: center;
     padding: 20px;
-    background-color:   #071359;
+    background-color: #071359; /* Cor de fundo azul escuro */
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
-    color: #F2F2F2;
+    box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
+    color: #F2F2F2; /* Cor do texto clara */
 }
 
 input, textarea{
@@ -293,23 +278,22 @@ form button{
     border: none;
     border-radius: 5px;
     border: 1px solid;
-    background-color: #F2F2F2;
-    color: #071359;
+    background-color: #F2F2F2; /* Cor de fundo clara */
+    color: #071359; /* Cor do texto azul escuro */
     cursor: pointer;
     transition: all .3s ease;
 }
 
 form button:hover{
-    border: 1px solid #F2F2F2;
-    background-color: #071359;
-    color: #F2F2F2;
+    border: 1px solid #F2F2F2; /* Borda clara */
+    background-color: #071359; /* Cor de fundo azul escuro */
+    color: #F2F2F2; /* Cor do texto clara */
 }
 
-/* Footer */
+/* Estilos do rodapé */
 footer{
-    width: 100%;
-    background-color: #071359;
-    color: #F2F2F2;
+    background-color: #071359; /* Cor de fundo azul escuro */
+    color: #F2F2F2; /* Cor do texto clara */
     padding: 5px 0px;
 }
 
@@ -317,8 +301,8 @@ footer p{
     text-align: center;
 }
 
+/* Estilos responsivos para telas maiores */
 @media(min-width: 480px){
-    
     #inteiro{
         display: block;
     }
@@ -385,7 +369,6 @@ footer p{
 }
 
 @media(min-width: 768px){
-
     header{
         height: 70px;
     }
@@ -413,7 +396,6 @@ footer p{
 
     #sobre{
         padding-right: 0px;
-
     }
 
     .images{
@@ -422,20 +404,20 @@ footer p{
         align-items: center;
         width: 350px;
     }
-    
+
     .img-sobre{
         height: 450px;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
     }
-    
+
     .foto{
         position: absolute;
         margin: 8px;
         border-radius: 50%;
-        border: 1px solid #071359;
-        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+        border: 1px solid #071359; /* Borda azul escuro */
+        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
         width: 200px;
         height: 200px;
     }
@@ -452,7 +434,7 @@ footer p{
         font-size: 50px;
     }
 
-    i{
+    i {
         font-size: 70px;
     }
 
@@ -470,7 +452,6 @@ footer p{
 }
 
 @media (min-width: 1024px){
-
     header{
         height: 60px;
     }
@@ -488,7 +469,7 @@ footer p{
     }
 
     .sobre{
-        padding: 60px 60px 50px 60px;   
+        padding: 60px 60px 50px 60px;
     }
 
     .images{
@@ -497,21 +478,21 @@ footer p{
         justify-content: center;
         align-items: center;
     }
-    
+
     .img-sobre{
         height: 500px;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
         width: 270px;
     }
-    
+
     .foto{
         position: absolute;
         margin: 8px;
         border-radius: 50%;
-        border: 1px solid #071359;
-        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25);
+        border: 1px solid #071359; /* Borda azul escuro */
+        box-shadow: 2px 2px 5px rgba(242, 242, 242, 0.25); /* Sombra suave */
         width: 250px;
         height: 250px;
     }
@@ -535,11 +516,10 @@ footer p{
     form{
         width: 60%;
         max-width: 470px;
-    }   
+    }
 }
 
-@media(min-width: 1200px)
-{
+@media(min-width: 1200px){
     header{
         padding: 0% 10%;
     }
@@ -548,4 +528,3 @@ footer p{
         max-width: 1200px;
     }
 }
-
